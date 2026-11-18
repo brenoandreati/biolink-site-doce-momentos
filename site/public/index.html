@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Doces Momentos Convites | Papelaria de Casamento Personalizada</title>
+  <meta name="description" content="Convites de casamento, caixas para padrinhos, manuais e lacres de cera feitos à mão por Patricia Paião. Há 14 anos criando papelaria exclusiva. Envio para todo o Brasil.">
+  <meta name="theme-color" content="#F6F2EC">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Doces Momentos Convites">
+  <meta property="og:title" content="Doces Momentos Convites | Papelaria de Casamento">
+  <meta property="og:description" content="Escolha o seu convite, personalize e receba o orçamento pelo WhatsApp. Envio para todo o Brasil.">
+  <meta property="og:url" content="https://doce-momentos-convite-site.pages.dev/">
+  <meta property="og:image" content="https://doce-momentos-convite-site.pages.dev/fotos/jardim-aquarela-1.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #F6F2EC;
+      --paper-warm: #FCFAF7;
+      --brand: #55697F;
+      --brand-dark: #45576B;
+      --ink: #1F2E45;
+      --muted: #6E6A64;
+      --gold: #B8955A;
+      --gold-dark: #8F703F;
+      --sage: #8A9682;
+      --linen: #E6DED2;
+      --wa: #25D366;
+      --ease: cubic-bezier(.22, .61, .36, 1);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --gutter: 20px;
+      --header-h: 64px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body.travado { overflow: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 var(--gutter); }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 400; letter-spacing: .28em; text-transform: uppercase; color: var(--brand);
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--ink); margin: 0; line-height: 1.12; }
+    h2 { font-size: clamp(32px, 6vw, 46px); }
+    .script { font-family: "Pinyon Script", cursive; font-weight: 400; color: var(--brand); }
+    .lead { font-family: var(--serif); font-size: 20px; font-style: italic; line-height: 1.5; color: var(--ink); }
+
+    /* ---------- Botões ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 12px 28px; border-radius: 999px;
+      font-family: var(--sans); font-size: 12.5px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase;
+      text-decoration: none; cursor: pointer; border: 1px solid transparent;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn svg { width: 19px; height: 19px; flex: none; }
+    .btn-primary { background: var(--brand); color: var(--paper-warm); border-color: var(--brand); box-shadow: 0 10px 24px -14px rgba(31,46,69,.65); }
+    .btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--brand); border-color: var(--brand); }
+    .btn-outline:hover { background: var(--paper-warm); transform: translateY(-2px); }
+    .btn:disabled { opacity: .6; cursor: progress; transform: none; }
+
+    /* ---------- Cabeçalho ---------- */
+    .header {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(246,242,236,.86);
+      backdrop-filter: saturate(1.2) blur(10px); -webkit-backdrop-filter: saturate(1.2) blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .header.rolou { border-bottom-color: var(--linen); box-shadow: 0 8px 24px -20px rgba(31,46,69,.4); }
+    .header .wrap { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand svg { width: 40px; height: 40px; flex: none; }
+    .brand-name { font-family: var(--serif); font-size: 17px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; line-height: 1.1; }
+    .brand-name small { display: block; font-family: var(--sans); font-size: 9.5px; font-weight: 400; letter-spacing: .3em; color: var(--muted); margin-top: 3px; }
+    .nav { display: none; gap: 32px; }
+    .nav a { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; color: var(--ink); position: relative; padding: 6px 0; }
+    .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--gold); transform: scaleX(0); transition: transform .3s var(--ease); }
+    .nav a:hover::after { transform: scaleX(1); }
+    .header .btn { min-height: 40px; padding: 8px 16px; font-size: 11px; letter-spacing: .14em; }
+    .header .btn .rotulo-longo { display: none; }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 36px 0 64px; }
+    .hero .wrap { display: grid; gap: 40px; }
+    .hero-texto { text-align: center; }
+    .hero h1 { font-size: clamp(40px, 10vw, 66px); letter-spacing: .01em; margin: 18px 0 0; }
+    .hero h1 .script { display: block; font-size: 1.15em; line-height: 1.05; margin-top: 4px; }
+    .hero .lead { margin: 22px auto 0; max-width: 460px; }
+    .hero-acoes { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+    .hero-selos { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 22px; margin: 28px 0 0; padding: 0; list-style: none; font-size: 13px; color: var(--muted); }
+    .hero-selos li { display: flex; align-items: center; gap: 8px; }
+    .hero-selos svg { width: 16px; height: 16px; color: var(--gold-dark); }
+
+    .hero-fotos { position: relative; max-width: 520px; width: 100%; margin: 0 auto; }
+    .hero-fotos .principal {
+      border-radius: 200px 200px 6px 6px; overflow: hidden; aspect-ratio: 4 / 5;
+      box-shadow: 0 40px 60px -40px rgba(31,46,69,.55);
+    }
+    .hero-fotos .principal img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-fotos .detalhe {
+      position: absolute; width: 38%; aspect-ratio: 1; left: -4%; bottom: -6%;
+      border-radius: 50%; overflow: hidden; border: 6px solid var(--paper-warm);
+      box-shadow: 0 20px 40px -20px rgba(31,46,69,.55);
+    }
+    .hero-fotos .detalhe img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-fotos .tag {
+      position: absolute; right: -2%; top: 10%;
+      background: var(--paper-warm); border: 1px solid var(--linen); border-radius: 4px;
+      padding: 10px 14px; text-align: center; box-shadow: 0 16px 30px -20px rgba(31,46,69,.5);
+    }
+    .hero-fotos .tag strong { display: block; font-family: var(--serif); font-size: 30px; font-weight: 500; line-height: 1; color: var(--brand); }
+    .hero-fotos .tag span { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+
+    /* ---------- Seções ---------- */
+    section { position: relative; }
+    .secao { padding: 72px 0; }
+    .secao-cabeca { text-align: center; max-width: 620px; margin: 0 auto 40px; }
+    .secao-cabeca h2 { margin-top: 14px; }
+    .secao-cabeca p { margin: 14px 0 0; color: var(--muted); }
+    .ornamento { display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--gold); margin: 18px auto 0; width: 160px; }
+    .ornamento::before, .ornamento::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .ornamento::after { background: linear-gradient(90deg, var(--gold), transparent); }
+    .ornamento svg { width: 12px; height: 12px; }
+
+    /* ---------- Sobre ---------- */
+    .sobre { background: var(--paper-warm); border-top: 1px solid var(--linen); border-bottom: 1px solid var(--linen); }
+    .sobre .wrap { display: grid; gap: 40px; align-items: center; }
+    .sobre-foto { position: relative; max-width: 460px; width: 100%; margin: 0 auto; }
+    .sobre-foto img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; }
+    .sobre-foto::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid var(--gold); border-radius: 4px; z-index: -1; opacity: .6; }
+    .sobre-texto h2 { margin: 14px 0 0; }
+    .sobre-texto p { margin: 18px 0 0; }
+    .sobre-texto .assinatura { font-family: "Pinyon Script", cursive; font-size: 34px; color: var(--brand); margin-top: 18px; line-height: 1; }
+    .numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--linen); text-align: center; }
+    .numeros strong { display: block; font-family: var(--serif); font-size: 30px; font-weight: 500; color: var(--brand); line-height: 1.1; }
+    .numeros span { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); line-height: 1.4; display: block; margin-top: 4px; }
+
+    /* ---------- Produtos ---------- */
+    .filtros { display: flex; gap: 8px; overflow-x: auto; padding: 4px var(--gutter) 8px; margin: 0 calc(var(--gutter) * -1) 28px; scrollbar-width: none; }
+    .filtros::-webkit-scrollbar { display: none; }
+    .filtro {
+      flex: none; border: 1px solid var(--linen); background: var(--paper-warm); color: var(--ink);
+      border-radius: 999px; padding: 9px 18px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; cursor: pointer;
+      transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+    }
+    .filtro:hover { border-color: var(--brand); }
+    .filtro[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--paper-warm); }
+
+    .grade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .card {
+      display: flex; flex-direction: column; text-align: left; padding: 0; border: 0; cursor: pointer;
+      background: var(--paper-warm); border-radius: 6px; overflow: hidden;
+      box-shadow: 0 1px 0 var(--linen), 0 20px 40px -32px rgba(31,46,69,.5);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .card[hidden] { display: none; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 1px 0 var(--linen), 0 28px 50px -30px rgba(31,46,69,.55); }
+    .card-foto { aspect-ratio: 1; overflow: hidden; background: var(--linen); }
+    .card-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+    .card:hover .card-foto img { transform: scale(1.04); }
+    .card-corpo { padding: 14px 14px 16px; display: flex; flex-direction: column; flex: 1; }
+    .card-cat { font-size: 9.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-dark); }
+    .card h3 { font-size: 19px; margin-top: 6px; line-height: 1.15; }
+    .card-desc { display: none; font-size: 14px; color: var(--muted); margin: 8px 0 0; line-height: 1.55; }
+    .card-pe { display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 12px; }
+    .preco { font-family: var(--serif); font-size: 19px; font-weight: 500; color: var(--brand); line-height: 1; }
+    .preco small { display: block; font-family: var(--sans); font-size: 10px; font-weight: 300; letter-spacing: .04em; color: var(--muted); margin-top: 4px; }
+    .card-acao { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--brand); color: var(--brand); flex: none; transition: background-color .2s var(--ease), color .2s var(--ease); }
+    .card-acao svg { width: 16px; height: 16px; }
+    .card:hover .card-acao { background: var(--brand); color: var(--paper-warm); }
+
+    /* ---------- Como funciona ---------- */
+    .passos { display: grid; gap: 14px; counter-reset: passo; margin: 0; padding: 0; list-style: none; }
+    .passo { background: var(--paper-warm); border: 1px solid var(--linen); border-radius: 6px; padding: 24px 22px; position: relative; }
+    .passo::before {
+      counter-increment: passo; content: counter(passo);
+      position: absolute; top: 18px; right: 22px; font-family: var(--serif); font-size: 44px; line-height: 1; color: var(--linen); font-weight: 500;
+    }
+    .passo svg { width: 28px; height: 28px; color: var(--gold-dark); }
+    .passo h3 { font-size: 24px; margin-top: 14px; }
+    .passo p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+
+    /* ---------- Chamada final ---------- */
+    .chamada { padding: 0 0 80px; }
+    .chamada-cartao {
+      position: relative; text-align: center; background: var(--brand); color: var(--paper-warm);
+      border-radius: 6px; padding: 48px 24px; overflow: hidden;
+    }
+    .chamada-cartao::before { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(246,242,236,.3); border-radius: 3px; pointer-events: none; }
+    .chamada-cartao h2 { color: var(--paper-warm); }
+    .chamada-cartao h2 .script { color: #E9DCC4; }
+    .chamada-cartao p { margin: 14px auto 28px; max-width: 440px; opacity: .9; }
+    .chamada-cartao .btn { background: var(--paper-warm); color: var(--brand-dark); border-color: var(--paper-warm); }
+    .chamada-cartao .btn:hover { background: #fff; }
+
+    /* ---------- Rodapé ---------- */
+    .rodape { border-top: 1px solid var(--linen); padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); text-align: center; font-size: 13px; color: var(--muted); }
+    .rodape .brand { justify-content: center; }
+    .redes { display: flex; justify-content: center; gap: 12px; margin: 22px 0; }
+    .redes a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--linen); color: var(--brand); background: var(--paper-warm); transition: color .2s var(--ease), border-color .2s var(--ease); }
+    .redes a:hover { color: var(--gold-dark); border-color: var(--gold); }
+    .redes svg { width: 19px; height: 19px; }
+    .rodape p { margin: 4px 0; }
+
+    /* ---------- Janela do produto ---------- */
+    .produto {
+      padding: 0; border: 0; margin: 0; max-width: none; max-height: none;
+      width: 100%; height: 100%; height: 100dvh; background: var(--paper-warm); color: var(--ink);
+    }
+    .produto::backdrop { background: rgba(31,46,69,.5); backdrop-filter: blur(3px); }
+    .produto[open] { animation: subir .35s var(--ease); }
+    @keyframes subir { from { transform: translateY(24px); opacity: 0; } }
+    .produto-interno { display: flex; flex-direction: column; height: 100%; overflow-y: auto; overscroll-behavior: contain; }
+    .fechar {
+      position: fixed; top: max(12px, env(safe-area-inset-top)); right: 12px; z-index: 5;
+      width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--linen);
+      background: rgba(252,250,247,.92); display: grid; place-items: center; cursor: pointer; color: var(--ink);
+      box-shadow: 0 6px 16px -10px rgba(31,46,69,.5);
+    }
+    .fechar svg { width: 20px; height: 20px; }
+    .galeria { background: var(--linen); }
+    .galeria-principal { aspect-ratio: 1; overflow: hidden; }
+    .galeria-principal img { width: 100%; height: 100%; object-fit: cover; }
+    .miniaturas { display: flex; gap: 8px; padding: 10px var(--gutter); background: var(--paper-warm); }
+    .miniaturas:empty { display: none; }
+    .miniatura { width: 60px; height: 60px; padding: 0; border: 2px solid transparent; border-radius: 4px; overflow: hidden; cursor: pointer; background: none; opacity: .65; transition: opacity .2s, border-color .2s; }
+    .miniatura img { width: 100%; height: 100%; object-fit: cover; }
+    .miniatura[aria-current="true"] { border-color: var(--gold); opacity: 1; }
+
+    .produto-info { padding: 24px var(--gutter) calc(32px + env(safe-area-inset-bottom)); }
+    .produto-info h2 { font-size: 34px; margin-top: 8px; }
+    .produto-info .preco { font-size: 26px; margin-top: 14px; }
+    .produto-info .descricao { margin: 14px 0 0; color: var(--muted); }
+
+    form.personalizar { margin-top: 26px; display: grid; gap: 22px; }
+    .campo { display: grid; gap: 8px; border: 0; padding: 0; margin: 0; min-width: 0; }
+    .campo > label, .campo > legend { font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); padding: 0; }
+    .campo .ajuda { font-size: 13px; color: var(--muted); margin: -2px 0 0; }
+    .opcional { font-weight: 300; letter-spacing: .06em; text-transform: none; color: var(--muted); }
+
+    .qtd { display: inline-flex; align-items: center; border: 1px solid var(--linen); border-radius: 999px; background: #fff; width: max-content; }
+    .qtd button { width: 48px; height: 48px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; color: var(--brand); border-radius: 50%; }
+    .qtd button:hover { background: var(--paper); }
+    .qtd button svg { width: 18px; height: 18px; }
+    .qtd input { width: 84px; height: 48px; border: 0; text-align: center; font-size: 18px; font-weight: 400; background: none; -moz-appearance: textfield; }
+    .qtd input::-webkit-outer-spin-button, .qtd input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .atalhos { display: flex; flex-wrap: wrap; gap: 6px; }
+    .atalhos button { border: 1px solid var(--linen); background: none; border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; color: var(--muted); }
+    .atalhos button:hover { border-color: var(--brand); color: var(--brand); }
+
+    .cores { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cor { position: relative; }
+    .cor input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .cor span {
+      display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px 7px 8px;
+      border: 1px solid var(--linen); border-radius: 999px; font-size: 13.5px; background: #fff; transition: border-color .2s, box-shadow .2s;
+    }
+    .cor i { width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(31,46,69,.15); flex: none; }
+    .cor input:checked + span { border-color: var(--brand); box-shadow: 0 0 0 1px var(--brand); }
+    .cor input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    textarea, input[type="date"], input[type="text"] {
+      width: 100%; border: 1px solid var(--linen); border-radius: 6px; background: #fff; padding: 12px 14px; font-size: 16px; font-weight: 300;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+    textarea:focus, input[type="date"]:focus, input[type="text"]:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(85,105,127,.15); }
+    .contador { font-size: 12px; color: var(--muted); text-align: right; margin-top: -4px; }
+
+    .upload {
+      position: relative; display: flex; align-items: center; gap: 14px; padding: 14px;
+      border: 1px dashed #C9BCA8; border-radius: 6px; background: #fff; cursor: pointer; transition: border-color .2s, background-color .2s;
+    }
+    .upload:hover, .upload.arrastando { border-color: var(--brand); background: var(--paper); }
+    .upload input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+    .upload-icone { width: 56px; height: 56px; border-radius: 6px; background: var(--paper); display: grid; place-items: center; color: var(--brand); flex: none; overflow: hidden;
+      background-image: linear-gradient(45deg, #eee 25%, transparent 25%), linear-gradient(-45deg, #eee 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #eee 75%), linear-gradient(-45deg, transparent 75%, #eee 75%);
+      background-size: 12px 12px; background-position: 0 0, 0 6px, 6px -6px, -6px 0; }
+    .upload-icone svg { width: 24px; height: 24px; }
+    .upload-icone img { width: 100%; height: 100%; object-fit: contain; }
+    .upload-texto { font-size: 14px; line-height: 1.4; min-width: 0; }
+    .upload-texto strong { display: block; font-weight: 400; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .upload-texto span { color: var(--muted); font-size: 13px; }
+    .upload-status { font-size: 13px; display: flex; align-items: center; gap: 8px; min-height: 20px; }
+    .upload-status.ok { color: #3D7A4F; }
+    .upload-status.erro { color: #A3412F; }
+    .upload-status.carregando { color: var(--muted); }
+    .remover { border: 0; background: none; color: var(--brand); text-decoration: underline; cursor: pointer; font-size: 13px; padding: 0; margin-left: auto; position: relative; z-index: 2; }
+    .giro { width: 14px; height: 14px; border: 2px solid var(--linen); border-top-color: var(--brand); border-radius: 50%; animation: girar .8s linear infinite; }
+    @keyframes girar { to { transform: rotate(360deg); } }
+
+    .resumo { background: var(--paper); border: 1px solid var(--linen); border-radius: 6px; padding: 16px; }
+    .resumo h4 { margin: 0 0 8px; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+    .resumo pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-family: var(--sans); font-size: 13.5px; line-height: 1.55; color: var(--ink); }
+
+    .enviar { width: 100%; }
+    .enviar-nota { font-size: 12.5px; color: var(--muted); text-align: center; margin: -10px 0 0; }
+
+    /* ---------- Animação ao rolar ---------- */
+    .surge { opacity: 0; transform: translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .surge.visivel { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .surge { opacity: 1; transform: none; transition: none; }
+      .produto[open] { animation: none; }
+      .card, .card-foto img, .btn { transition: none; }
+    }
+
+    /* ============ Tablet ============ */
+    @media (min-width: 640px) {
+      :root { --gutter: 32px; }
+      .grade { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .card-corpo { padding: 18px 20px 20px; }
+      .card h3 { font-size: 23px; }
+      .card-desc { display: block; }
+      .hero-acoes { flex-direction: row; justify-content: center; }
+      .passos { grid-template-columns: repeat(3, 1fr); }
+      .header .btn .rotulo-longo { display: inline; }
+    }
+
+    /* ============ Computador ============ */
+    @media (min-width: 960px) {
+      :root { --header-h: 76px; }
+      .nav { display: flex; }
+      .brand svg { width: 46px; height: 46px; }
+      .brand-name { font-size: 19px; }
+      .header .btn { min-height: 44px; padding: 10px 20px; }
+
+      .hero { padding: 56px 0 96px; }
+      .hero .wrap { grid-template-columns: 1.05fr 1fr; gap: 72px; align-items: center; }
+      .hero-texto { text-align: left; }
+      .hero .lead { margin-left: 0; }
+      .hero-acoes { justify-content: flex-start; }
+      .hero-selos { justify-content: flex-start; }
+
+      .secao { padding: 104px 0; }
+      .secao-cabeca { margin-bottom: 52px; }
+      .sobre .wrap { grid-template-columns: 1fr 1.1fr; gap: 88px; }
+
+      .grade { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+      .filtros { justify-content: center; margin: 0 0 40px; padding: 4px 0 8px; overflow: visible; }
+
+      .chamada-cartao { padding: 72px 48px; }
+
+      /* janela do produto vira modal de duas colunas */
+      .produto { width: min(1040px, calc(100% - 64px)); height: auto; max-height: calc(100vh - 64px); margin: auto; border-radius: 8px; box-shadow: 0 40px 80px -30px rgba(31,46,69,.6); }
+      .produto-interno { flex-direction: row; max-height: calc(100vh - 64px); overflow: hidden; }
+      .galeria { width: 50%; flex: none; display: flex; flex-direction: column; }
+      .galeria-principal { flex: 1; aspect-ratio: auto; min-height: 0; }
+      .miniaturas { padding: 12px 16px; }
+      .produto-info { width: 50%; overflow-y: auto; padding: 44px 44px 40px; }
+      .fechar { position: absolute; top: 14px; right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Símbolo da marca, reutilizado no cabeçalho e no rodapé -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="selo" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="32" fill="#55697F"/>
+      <circle cx="32" cy="32" r="28" fill="none" stroke="#F6F2EC" stroke-opacity=".5" stroke-width="1"/>
+      <g fill="none" stroke="#F6F2EC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32,11 C28,16 27.5,22 32,28 C36.5,22 36,16 32,11Z"/>
+        <path d="M32,28 C27,26.5 23.5,22 23,16.5 C27.5,18 30.5,22 32,28"/>
+        <path d="M32,28 C37,26.5 40.5,22 41,16.5 C36.5,18 33.5,22 32,28"/>
+        <rect x="17" y="31" width="30" height="20" rx="1.5"/>
+        <path d="M17,31 L32,42 L47,31"/>
+      </g>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6l-4.5.9z"/>
+        <path d="M9 8.6c.2-.5.6-.6.9-.6h.4c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.6l-.5.6c-.1.1-.2.3-.1.5.6 1.2 1.6 2.1 2.8 2.7.2.1.4 0 .5-.1l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.4c0 .4-.2.8-.6 1-.6.3-1.4.4-2.1.2-2.6-.8-4.7-2.8-5.6-5.4-.2-.7-.1-1.6 0-2z"/>
+      </g>
+    </symbol>
+    <symbol id="i-flor" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c.6 4 2.2 6 6.5 7-4.3 1-5.9 3-6.5 7-.6-4-2.2-6-6.5-7 4.3-1 5.9-3 6.5-7z"/></symbol>
+    <symbol id="i-mais" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-menos" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="header" id="topo">
+    <div class="wrap">
+      <a class="brand" href="#inicio" aria-label="Doces Momentos Convites, início">
+        <svg aria-hidden="true"><use href="#selo"/></svg>
+        <span class="brand-name">Doces Momentos<small>Convites</small></span>
+      </a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#como-funciona">Como funciona</a>
+      </nav>
+      <a class="btn btn-primary" href="#produtos">
+        <svg aria-hidden="true"><use href="#i-flor"/></svg>
+        <span><span class="rotulo-longo">Fazer </span>orçamento</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-texto surge">
+          <span class="eyebrow">Papelaria de casamento</span>
+          <h1>Convites que contam <span class="script">a história de vocês</span></h1>
+          <p class="lead">Convites, caixas para padrinhos e detalhes feitos à mão, com papéis nobres, aquarelas e lacres de cera. Escolha, personalize e receba o seu orçamento no WhatsApp.</p>
+          <div class="hero-acoes">
+            <a class="btn btn-primary" href="#produtos">Ver produtos <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+            <a class="btn btn-outline" href="#como-funciona">Como funciona</a>
+          </div>
+          <ul class="hero-selos">
+            <li><svg aria-hidden="true"><use href="#i-flor"/></svg>Feito à mão</li>
+            <li><svg aria-hidden="true"><use href="#i-flor"/></svg>100% personalizado</li>
+            <li><svg aria-hidden="true"><use href="#i-flor"/></svg>Envio para todo o Brasil</li>
+          </ul>
+        </div>
+        <div class="hero-fotos surge">
+          <div class="principal"><img src="fotos/jardim-aquarela-1.webp" alt="Convite em caixa com ilustração em aquarela de um jardim, laço de seda verde e lacre de cera" width="1080" height="1080" fetchpriority="high"></div>
+          <div class="detalhe"><img src="fotos/lacres-1.webp" alt="Lacres de cera personalizados" width="1080" height="1080" loading="lazy"></div>
+          <div class="tag"><strong>14</strong><span>anos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="secao sobre" id="sobre">
+      <div class="wrap">
+        <div class="sobre-foto surge">
+          <img src="fotos/jardim-aquarela-3.webp" alt="Envelope branco fechado com lacre de cera verde e raminho de eucalipto" width="1080" height="1080" loading="lazy">
+        </div>
+        <div class="sobre-texto surge">
+          <span class="eyebrow">Sobre nós</span>
+          <h2>Cada detalhe pensado <span class="script">com carinho</span></h2>
+          <p>A Doces Momentos nasceu do amor pelo papel e pelas histórias de amor. Há 14 anos, a Patricia Paião transforma o sonho de cada casal em convites únicos: ilustrações em aquarela do local da cerimônia, monogramas em relevo, envelopes de bico, fitas de seda e lacres de cera feitos um a um.</p>
+          <p>Trabalhamos com casamentos, 15 anos e eventos especiais, criando toda a papelaria do grande dia: do convite ao manual dos padrinhos, sempre com acabamento artesanal e entrega para todo o Brasil.</p>
+          <p class="assinatura">Patricia Paião</p>
+          <div class="numeros">
+            <div><strong>14</strong><span>anos de<br>experiência</span></div>
+            <div><strong>100%</strong><span>feito<br>à mão</span></div>
+            <div><strong>BR</strong><span>envio para<br>todo o país</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUTOS ================= -->
+    <section class="secao" id="produtos">
+      <div class="wrap">
+        <div class="secao-cabeca surge">
+          <span class="eyebrow">Nossos produtos</span>
+          <h2>Escolha e <span class="script">personalize</span></h2>
+          <p>Toque no produto para escolher a quantidade, escrever o texto do convite e enviar a sua logo ou monograma.</p>
+        </div>
+        <div class="filtros" role="group" aria-label="Filtrar produtos por categoria">
+          <button class="filtro" type="button" data-cat="todos" aria-pressed="true">Todos</button>
+          <button class="filtro" type="button" data-cat="convites" aria-pressed="false">Convites</button>
+          <button class="filtro" type="button" data-cat="padrinhos" aria-pressed="false">Padrinhos</button>
+          <button class="filtro" type="button" data-cat="detalhes" aria-pressed="false">Detalhes e lembranças</button>
+        </div>
+        <div class="grade" id="grade"></div>
+      </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA ================= -->
+    <section class="secao sobre" id="como-funciona">
+      <div class="wrap" style="display:block">
+        <div class="secao-cabeca surge">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Simples assim</h2>
+          <div class="ornamento" aria-hidden="true"><svg><use href="#i-flor"/></svg></div>
+        </div>
+        <ol class="passos">
+          <li class="passo surge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6l8.5 6.5L20.5 6"/></svg>
+            <h3>Escolha</h3>
+            <p>Veja os nossos produtos e toque no que mais combina com o seu evento.</p>
+          </li>
+          <li class="passo surge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+            <h3>Personalize</h3>
+            <p>Informe a quantidade, a cor, o texto que vai impresso e envie a sua logo ou monograma.</p>
+          </li>
+          <li class="passo surge">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>
+            <h3>Receba o orçamento</h3>
+            <p>Seu pedido chega pronto no WhatsApp da Patricia, que responde com valores e prazos.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= CHAMADA ================= -->
+    <section class="secao chamada">
+      <div class="wrap">
+        <div class="chamada-cartao surge">
+          <h2>Tem uma ideia <span class="script">diferente?</span></h2>
+          <p>Criamos projetos sob medida. Conte como imagina o seu convite e montamos juntos.</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://wa.me/5512992530847?text=Ol%C3%A1%2C%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20personalizado."><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <svg aria-hidden="true"><use href="#selo"/></svg>
+        <span class="brand-name" style="text-align:left">Doces Momentos<small>Convites</small></span>
+      </a>
+      <div class="redes">
+        <a href="https://www.instagram.com/docesmomentosconvites/" target="_blank" rel="noopener" aria-label="Instagram (abre em nova aba)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.threads.net/@docesmomentosconvites" target="_blank" rel="noopener" aria-label="Threads (abre em nova aba)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M16.5 11.2c-.4-2.4-2-3.7-4.4-3.7-2.6 0-4.2 1.7-4.2 1.7"/><path d="M16.6 11.3c-3.9-1-7.4-.2-7.4 2.6 0 1.6 1.5 2.5 3.1 2.4 2.5-.1 4.1-1.8 4.1-5.6"/><path d="M16.6 11.3c2.2.9 3.2 2.6 2.8 4.6-.6 3-3.4 5.1-7.3 5.1-5.2 0-8.1-3.4-8.1-9S6.9 3 12.1 3c4 0 6.7 2 7.7 5.4"/></svg>
+        </a>
+        <a href="https://wa.me/5512992530847" target="_blank" rel="noopener" aria-label="WhatsApp (abre em nova aba)">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg>
+        </a>
+      </div>
+      <p>Patricia Paião · Papelaria personalizada para casamentos</p>
+      <p>WhatsApp (12) 99253-0847 · Envio para todo o Brasil</p>
+    </div>
+  </footer>
+
+  <!-- ================= JANELA DO PRODUTO ================= -->
+  <dialog class="produto" id="produto" aria-labelledby="p-nome">
+    <div class="produto-interno">
+      <button class="fechar" type="button" id="fechar" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="galeria">
+        <div class="galeria-principal"><img id="p-foto" src="" alt=""></div>
+        <div class="miniaturas" id="p-miniaturas"></div>
+      </div>
+      <div class="produto-info">
+        <span class="eyebrow" id="p-cat"></span>
+        <h2 id="p-nome"></h2>
+        <div class="preco" id="p-preco">R$ 00,00<small>valor por unidade · sob consulta</small></div>
+        <p class="descricao" id="p-desc"></p>
+
+        <form class="personalizar" id="form" novalidate>
+          <div class="campo">
+            <label for="f-qtd">Quantidade</label>
+            <div class="qtd">
+              <button type="button" data-passo="-1" aria-label="Diminuir quantidade"><svg aria-hidden="true"><use href="#i-menos"/></svg></button>
+              <input id="f-qtd" name="qtd" type="number" inputmode="numeric" min="1" max="5000" value="100" required>
+              <button type="button" data-passo="1" aria-label="Aumentar quantidade"><svg aria-hidden="true"><use href="#i-mais"/></svg></button>
+            </div>
+            <div class="atalhos" id="f-atalhos" aria-label="Quantidades comuns"></div>
+          </div>
+
+          <fieldset class="campo">
+            <legend>Cor preferida <span class="opcional">(opcional)</span></legend>
+            <div class="cores" id="f-cores"></div>
+          </fieldset>
+
+          <div class="campo">
+            <label for="f-texto">Texto para impressão <span class="opcional">(opcional)</span></label>
+            <p class="ajuda" id="f-texto-ajuda">Escreva exatamente o que deve aparecer impresso: nomes, data, horário, local, frase especial…</p>
+            <textarea id="f-texto" name="texto" maxlength="1200" aria-describedby="f-texto-ajuda"></textarea>
+            <div class="contador" id="f-contador">0 / 1200</div>
+          </div>
+
+          <div class="campo">
+            <label for="f-data">Data do evento <span class="opcional">(opcional)</span></label>
+            <input id="f-data" name="data" type="date">
+          </div>
+
+          <div class="campo">
+            <label for="f-logo">Sua logo ou monograma <span class="opcional">(opcional)</span></label>
+            <div class="upload" id="f-upload">
+              <div class="upload-icone" id="f-logo-previa">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+              </div>
+              <div class="upload-texto">
+                <strong id="f-logo-nome">Toque para enviar a imagem</strong>
+                <span>PNG, JPG ou SVG, até 10 MB</span>
+              </div>
+              <input id="f-logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml">
+              <button type="button" class="remover" id="f-logo-remover" hidden>Remover</button>
+            </div>
+            <div class="upload-status" id="f-logo-status" role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="campo">
+            <label for="f-nome">Seu nome <span class="opcional">(opcional)</span></label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" maxlength="80" placeholder="Como podemos te chamar?">
+          </div>
+
+          <div class="resumo" aria-live="polite">
+            <h4>Mensagem que será enviada</h4>
+            <pre id="f-resumo"></pre>
+          </div>
+
+          <button class="btn btn-primary enviar" type="submit" id="f-enviar">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>
+            <span id="f-enviar-rotulo">Enviar pedido no WhatsApp</span>
+          </button>
+          <p class="enviar-nota">Você será levado ao WhatsApp com a mensagem pronta. É só tocar em enviar.</p>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+  (() => {
+    const WHATSAPP = '5512992530847';
+
+    const CATEGORIAS = { convites: 'Convites', padrinhos: 'Padrinhos', detalhes: 'Detalhes e lembranças' };
+
+    const CORES = [
+      { nome: 'Branco / Offwhite', hex: '#F7F3EA' },
+      { nome: 'Verde', hex: '#5E6B4E' },
+      { nome: 'Nude', hex: '#D9BFA6' },
+      { nome: 'Rosé', hex: '#D7A9A3' },
+      { nome: 'Azul marinho', hex: '#1F2E45' },
+      { nome: 'Azul serenity', hex: '#9DB3CF' },
+      { nome: 'Preto', hex: '#1B1B1B' },
+    ];
+
+    const PRODUTOS = [
+      {
+        id: 'jardim-aquarela', cat: 'convites', nome: 'Convite Jardim em Aquarela',
+        desc: 'Convite em caixa com ilustração em aquarela do local da cerimônia, laço de seda e lacre de cera. Acompanha envelope com monograma do casal.',
+        fotos: ['jardim-aquarela-1', 'jardim-aquarela-2', 'jardim-aquarela-3'],
+        qtd: 100, atalhos: [50, 100, 150, 200],
+        exemplo: 'Ex.: Mariana & Rafael\nCom a bênção de Deus e de seus pais, convidam para a cerimônia de casamento\n12 de setembro de 2027, às 16h\nEspaço Jardim das Flores, São José dos Campos',
+      },
+      {
+        id: 'preto-branco', cat: 'convites', nome: 'Convite Clássico Preto e Branco',
+        desc: 'Envelope com forro preto, monograma delicado e lacre de cera preto. Elegância atemporal para casamentos clássicos e black-tie.',
+        fotos: ['preto-branco-1'],
+        qtd: 100, atalhos: [50, 100, 150, 200],
+        exemplo: 'Ex.: Letícia & Elias\nNenhuma história é construída apenas por duas pessoas…\n20 de março de 2027, às 19h\nIgreja Matriz, Taubaté',
+      },
+      {
+        id: 'igreja-aquarela', cat: 'convites', nome: 'Convite Igreja em Aquarela',
+        desc: 'Ilustração em aquarela da igreja da cerimônia, envelope verde oliva com lacre de cera e tag com o nome de cada convidado.',
+        fotos: ['igreja-aquarela-1'],
+        qtd: 100, atalhos: [50, 100, 150, 200],
+        exemplo: 'Ex.: Paula & Mateus\n“E, acima de tudo, tenham amor…” Colossenses 3:14\n5 de junho de 2027, às 17h\nIgreja de São Benedito',
+      },
+      {
+        id: 'envelope-oliva', cat: 'convites', nome: 'Convite Envelope Verde Oliva',
+        desc: 'Envelope verde oliva com lacre dourado e convite recortado com a aquarela da capela. Elegante à primeira vista, surpreendente ao abrir.',
+        fotos: ['envelope-oliva-2', 'envelope-oliva-1'],
+        qtd: 100, atalhos: [50, 100, 150, 200],
+        exemplo: 'Ex.: Aline & Jordan\nConvidam para a celebração do seu casamento\n8 de maio de 2027, às 16h30\nCapela Santa Rita',
+      },
+      {
+        id: 'caixa-padrinhos', cat: 'padrinhos', nome: 'Caixa Convite para Padrinhos',
+        desc: 'Caixa forrada com carta personalizada e espaço para mimos (copos, bebida, acessórios). O jeito mais especial de convidar quem vai estar ao seu lado no altar.',
+        fotos: ['caixa-padrinhos-1', 'caixa-padrinhos-2'],
+        qtd: 6, atalhos: [4, 6, 8, 10],
+        exemplo: 'Ex.: Luís Carlos,\nO grande dia está chegando e com ele a certeza de que Deus colocou pessoas muito especiais em nosso caminho…\nAceita ser nosso padrinho?',
+      },
+      {
+        id: 'manual-padrinhos', cat: 'padrinhos', nome: 'Manual dos Padrinhos',
+        desc: 'Livreto com monograma, orientações do grande dia e paleta de trajes ilustrada para padrinhos e madrinhas.',
+        fotos: ['manual-padrinhos-1', 'preto-branco-1'],
+        qtd: 8, atalhos: [4, 6, 8, 12],
+        exemplo: 'Ex.: Traje dos padrinhos: black-tie\nMadrinhas: vestido longo preto\nPadrinhos: terno preto, camisa branca, gravata preta\nChegada: 15h30',
+      },
+      {
+        id: 'lacres', cat: 'detalhes', nome: 'Lacres de Cera Personalizados',
+        desc: 'Lacres de cera com o monograma ou símbolo de vocês, em várias cores. Perfeitos para convites, lembrancinhas e embalagens.',
+        fotos: ['lacres-1'],
+        qtd: 100, atalhos: [50, 100, 200, 300],
+        exemplo: 'Ex.: Monograma com as iniciais M & R',
+      },
+      {
+        id: 'livro-colorir', cat: 'detalhes', nome: 'Livrinho de Colorir Infantil',
+        desc: 'Livrinho “Vamos colorir?” com personagens fofos e o monograma do casal, para entreter as crianças durante a festa.',
+        fotos: ['colorir-1', 'colorir-2'],
+        qtd: 20, atalhos: [10, 20, 30, 50],
+        exemplo: 'Ex.: Iniciais K & C na capa\nTítulo: Vamos colorir?',
+      },
+    ];
+
+    const $ = (s, el = document) => el.querySelector(s);
+    const foto = nome => `fotos/${nome}.webp`;
+
+    /* ---------------- Grade de produtos ---------------- */
+    const grade = $('#grade');
+    grade.innerHTML = PRODUTOS.map(p => `
+      <button class="card surge" type="button" data-id="${p.id}" data-cat="${p.cat}" aria-label="Personalizar ${p.nome}">
+        <div class="card-foto"><img src="${foto(p.fotos[0])}" alt="" loading="lazy" width="1080" height="1080"></div>
+        <div class="card-corpo">
+          <span class="card-cat">${CATEGORIAS[p.cat]}</span>
+          <h3>${p.nome}</h3>
+          <p class="card-desc">${p.desc}</p>
+          <div class="card-pe">
+            <div class="preco">R$ 00,00<small>sob consulta</small></div>
+            <span class="card-acao" aria-hidden="true"><svg><use href="#i-seta"/></svg></span>
+          </div>
+        </div>
+      </button>`).join('');
+
+    grade.addEventListener('click', e => {
+      const card = e.target.closest('.card');
+      if (card) abrir(card.dataset.id);
+    });
+
+    document.querySelectorAll('.filtro').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('.filtro').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      const cat = b.dataset.cat;
+      grade.querySelectorAll('.card').forEach(c => { c.hidden = cat !== 'todos' && c.dataset.cat !== cat; });
+    }));
+
+    /* ---------------- Animação ao rolar ---------------- */
+    const obs = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('visivel'); obs.unobserve(en.target); }
+    }), { rootMargin: '0px 0px -8% 0px' }) : null;
+    document.querySelectorAll('.surge').forEach(el => obs ? obs.observe(el) : el.classList.add('visivel'));
+
+    const header = $('#topo');
+    const aoRolar = () => header.classList.toggle('rolou', scrollY > 8);
+    addEventListener('scroll', aoRolar, { passive: true }); aoRolar();
+
+    /* ---------------- Janela do produto ---------------- */
+    const dlg = $('#produto');
+    const form = $('#form');
+    const f = {
+      qtd: $('#f-qtd'), texto: $('#f-texto'), data: $('#f-data'), nome: $('#f-nome'),
+      logo: $('#f-logo'), cores: $('#f-cores'), atalhos: $('#f-atalhos'),
+    };
+    let atual = null;
+    const logo = { url: '', enviando: false, nome: '' };
+
+    f.cores.innerHTML = [{ nome: 'A definir', hex: '' }, ...CORES].map((c, i) => `
+      <label class="cor"><input type="radio" name="cor" value="${c.nome}" ${i === 0 ? 'checked' : ''}>
+        <span>${c.hex ? `<i style="background:${c.hex}"></i>` : '<i style="background:conic-gradient(#F7F3EA 0 25%,#5E6B4E 0 50%,#D7A9A3 0 75%,#9DB3CF 0)"></i>'}${c.nome}</span>
+      </label>`).join('');
+
+    function abrir(id, { atualizarUrl = true } = {}) {
+      const p = PRODUTOS.find(x => x.id === id);
+      if (!p) return;
+      atual = p;
+      $('#p-cat').textContent = CATEGORIAS[p.cat];
+      $('#p-nome').textContent = p.nome;
+      $('#p-desc').textContent = p.desc;
+      mostrarFoto(0);
+      $('#p-miniaturas').innerHTML = p.fotos.length > 1 ? p.fotos.map((n, i) => `
+        <button class="miniatura" type="button" data-i="${i}" aria-label="Ver foto ${i + 1}" ${i === 0 ? 'aria-current="true"' : ''}><img src="${foto(n)}" alt=""></button>`).join('') : '';
+
+      form.reset();
+      limparLogo();
+      f.qtd.value = p.qtd;
+      f.atalhos.innerHTML = p.atalhos.map(n => `<button type="button" data-qtd="${n}">${n} un.</button>`).join('');
+      f.texto.placeholder = p.exemplo;
+      atualizarResumo();
+
+      if (!dlg.open) { dlg.showModal(); document.body.classList.add('travado'); }
+      $('.produto-interno', dlg).scrollTop = 0;
+      $('.produto-info', dlg).scrollTop = 0;
+      if (atualizarUrl) history.replaceState(null, '', `#produto/${p.id}`);
+    }
+
+    function mostrarFoto(i) {
+      const p = atual;
+      const img = $('#p-foto');
+      img.src = foto(p.fotos[i]);
+      img.alt = `${p.nome}, foto ${i + 1}`;
+      document.querySelectorAll('.miniatura').forEach(m => m.setAttribute('aria-current', String(Number(m.dataset.i) === i)));
+    }
+    $('#p-miniaturas').addEventListener('click', e => { const m = e.target.closest('.miniatura'); if (m) mostrarFoto(Number(m.dataset.i)); });
+
+    function fechar() { if (dlg.open) dlg.close(); }
+    $('#fechar').addEventListener('click', fechar);
+    dlg.addEventListener('click', e => { if (e.target === dlg) fechar(); });
+    dlg.addEventListener('close', () => {
+      document.body.classList.remove('travado');
+      if (location.hash.startsWith('#produto/')) history.replaceState(null, '', '#produtos');
+    });
+
+    // abre direto pelo link: site/#produto/jardim-aquarela
+    const pelaUrl = () => { const m = location.hash.match(/^#produto\/([\w-]+)/); if (m) abrir(m[1], { atualizarUrl: false }); };
+    addEventListener('hashchange', pelaUrl); pelaUrl();
+
+    /* ---------------- Formulário ---------------- */
+    form.addEventListener('click', e => {
+      const passo = e.target.closest('[data-passo]');
+      if (passo) { f.qtd.value = Math.max(1, (parseInt(f.qtd.value, 10) || 0) + Number(passo.dataset.passo)); atualizarResumo(); }
+      const at = e.target.closest('[data-qtd]');
+      if (at) { f.qtd.value = at.dataset.qtd; atualizarResumo(); }
+    });
+    form.addEventListener('input', atualizarResumo);
+    form.addEventListener('change', atualizarResumo);
+
+    function dataBR(v) { if (!v) return ''; const [a, m, d] = v.split('-'); return `${d}/${m}/${a}`; }
+
+    function montarMensagem() {
+      const p = atual;
+      const qtd = Math.max(1, parseInt(f.qtd.value, 10) || 1);
+      const cor = form.cor.value;
+      const texto = f.texto.value.trim();
+      const nome = f.nome.value.trim();
+      const linhas = [
+        `Olá, Patricia! ${nome ? `Sou ${nome}, vim` : 'Vim'} pelo site e gostaria de um orçamento:`,
+        '',
+        `*Produto:* ${p.nome}`,
+        `*Quantidade:* ${qtd} ${qtd === 1 ? 'unidade' : 'unidades'}`,
+      ];
+      if (cor && cor !== 'A definir') linhas.push(`*Cor:* ${cor}`);
+      if (f.data.value) linhas.push(`*Data do evento:* ${dataBR(f.data.value)}`);
+      if (texto) linhas.push('', '*Texto para impressão:*', texto);
+      if (logo.url) linhas.push('', `*Minha logo:* ${logo.url}`);
+      else if (logo.nome) linhas.push('', '*Minha logo:* vou enviar a imagem aqui na conversa.');
+      linhas.push('', `Ver produto: ${location.origin}${location.pathname}#produto/${p.id}`);
+      return linhas.join('\n');
+    }
+
+    function atualizarResumo() {
+      if (!atual) return;
+      $('#f-contador').textContent = `${f.texto.value.length} / 1200`;
+      $('#f-resumo').textContent = montarMensagem().replace(/\*/g, '');
+    }
+
+    /* ---------------- Logo ---------------- */
+    const status = $('#f-logo-status');
+    const previa = $('#f-logo-previa');
+    const iconeUpload = previa.innerHTML;
+    const zona = $('#f-upload');
+
+    function setStatus(tipo, html) { status.className = 'upload-status ' + (tipo || ''); status.innerHTML = html || ''; }
+    function limparLogo() {
+      logo.url = ''; logo.nome = ''; logo.enviando = false;
+      f.logo.value = '';
+      previa.innerHTML = iconeUpload;
+      $('#f-logo-nome').textContent = 'Toque para enviar a imagem';
+      $('#f-logo-remover').hidden = true;
+      setStatus('', '');
+      travarEnvio(false);
+      atualizarResumo();
+    }
+    $('#f-logo-remover').addEventListener('click', e => { e.preventDefault(); limparLogo(); });
+
+    ['dragenter', 'dragover'].forEach(t => zona.addEventListener(t, () => zona.classList.add('arrastando')));
+    ['dragleave', 'drop'].forEach(t => zona.addEventListener(t, () => zona.classList.remove('arrastando')));
+
+    function travarEnvio(sim) {
+      $('#f-enviar').disabled = sim;
+      $('#f-enviar-rotulo').textContent = sim ? 'Aguarde, enviando a logo…' : 'Enviar pedido no WhatsApp';
+    }
+
+    // Reduz a imagem (máx. 1600px) para o envio ficar rápido. Mantém transparência em PNG/SVG.
+    function prepararImagem(arquivo) {
+      return new Promise((ok, falha) => {
+        const url = URL.createObjectURL(arquivo);
+        const img = new Image();
+        img.onload = () => {
+          const max = 1600;
+          let w = img.naturalWidth || 1200, h = img.naturalHeight || 1200;
+          const esc = Math.min(1, max / Math.max(w, h));
+          if (arquivo.type === 'image/svg+xml' && Math.max(w, h) < 800) { const k = 1200 / Math.max(w, h); w *= k; h *= k; }
+          else { w *= esc; h *= esc; }
+          const c = document.createElement('canvas');
+          c.width = Math.round(w); c.height = Math.round(h);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          URL.revokeObjectURL(url);
+          const tipo = arquivo.type === 'image/jpeg' ? 'image/jpeg' : 'image/png';
+          c.toBlob(b => b ? ok(b) : falha(new Error('conversão')), tipo, .9);
+        };
+        img.onerror = () => { URL.revokeObjectURL(url); falha(new Error('leitura')); };
+        img.src = url;
+      });
+    }
+
+    f.logo.addEventListener('change', async () => {
+      const arquivo = f.logo.files[0];
+      if (!arquivo) return;
+      if (!/^image\/(png|jpeg|webp|svg\+xml)$/.test(arquivo.type)) {
+        limparLogo();
+        setStatus('erro', 'Formato não aceito. Envie PNG, JPG ou SVG. Se a sua logo for PDF, mande direto na conversa do WhatsApp.');
+        return;
+      }
+      if (arquivo.size > 10 * 1024 * 1024) { limparLogo(); setStatus('erro', 'Imagem muito grande (máx. 10 MB).'); return; }
+
+      logo.nome = arquivo.name; logo.url = ''; logo.enviando = true;
+      const local = URL.createObjectURL(arquivo);
+      previa.innerHTML = `<img src="${local}" alt="Prévia da sua logo">`;
+      $('#f-logo-nome').textContent = arquivo.name;
+      $('#f-logo-remover').hidden = false;
+      setStatus('carregando', '<span class="giro" aria-hidden="true"></span> Enviando a sua logo…');
+      travarEnvio(true);
+      const esta = arquivo;
+
+      try {
+        const blob = await prepararImagem(arquivo);
+        const r = await fetch('/api/logo', { method: 'POST', headers: { 'content-type': blob.type }, body: blob });
+        const j = await r.json().catch(() => ({}));
+        if (f.logo.files[0] !== esta) return; // trocou de arquivo no meio do caminho
+        if (!r.ok || !j.url) throw new Error(j.erro || 'falha');
+        logo.url = j.url;
+        setStatus('ok', '✓ Logo recebida. O link dela vai junto na mensagem.');
+      } catch (err) {
+        if (f.logo.files[0] !== esta) return;
+        logo.url = '';
+        setStatus('erro', 'Não conseguimos enviar a logo agora. Tudo bem: a mensagem avisa que você vai mandar a imagem na conversa do WhatsApp.');
+      } finally {
+        if (f.logo.files[0] === esta) { logo.enviando = false; travarEnvio(false); atualizarResumo(); }
+      }
+    });
+
+    /* ---------------- Enviar para o WhatsApp ---------------- */
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (logo.enviando) return;
+      const qtd = parseInt(f.qtd.value, 10);
+      if (!qtd || qtd < 1) { f.qtd.value = 1; f.qtd.focus(); atualizarResumo(); return; }
+      const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(montarMensagem())}`;
+      const a = Object.assign(document.createElement('a'), { href: url, target: '_blank', rel: 'noopener' });
+      document.body.appendChild(a); a.click(); a.remove();
+    });
+  })();
+  </script>
+</body>
+</html>

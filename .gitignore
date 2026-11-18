@@ -1,2 +1,6 @@
 # prints de prévia gerados localmente
 .preview-*.png
+
+# arquivos locais do wrangler
+.wrangler/
+node_modules/
