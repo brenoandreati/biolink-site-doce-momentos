@@ -43,6 +43,11 @@
 
     *, *::before, *::after { box-sizing: border-box; }
 
+    /* sem zoom de dois toques e sem rolagem para os lados no celular */
+    * { touch-action: manipulation; }
+    html { overflow-x: hidden; }
+    @supports (overflow: clip) { html, body { overflow-x: clip; } }
+
     html { -webkit-text-size-adjust: 100%; }
 
     body {

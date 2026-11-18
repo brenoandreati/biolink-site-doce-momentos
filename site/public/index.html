@@ -41,6 +41,11 @@
       --header-h: 64px;
     }
     *, *::before, *::after { box-sizing: border-box; }
+
+    /* sem zoom de dois toques e sem rolagem para os lados no celular */
+    * { touch-action: manipulation; }
+    html { overflow-x: hidden; }
+    @supports (overflow: clip) { html, body { overflow-x: clip; } }
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     body {
@@ -53,7 +58,6 @@
       font-size: 16px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
     body.travado { overflow: hidden; }
     img { max-width: 100%; height: auto; display: block; }
@@ -109,6 +113,15 @@
     .nav a:hover::after { transform: scaleX(1); }
     .header .btn { min-height: 40px; padding: 8px 16px; font-size: 11px; letter-spacing: .14em; }
     .header .btn .rotulo-longo { display: none; }
+    .brand { min-width: 0; }
+    @media (max-width: 380px) {
+      .brand { gap: 9px; }
+      .brand svg { width: 34px; height: 34px; }
+      .brand-name { font-size: 14px; letter-spacing: .14em; }
+      .brand-name small { font-size: 8.5px; letter-spacing: .24em; }
+      .header .btn { padding: 8px 12px; gap: 6px; font-size: 10px; letter-spacing: .1em; }
+      .header .btn svg { display: none; }
+    }
 
     /* ---------- Hero ---------- */
     .hero { padding: 36px 0 64px; }
