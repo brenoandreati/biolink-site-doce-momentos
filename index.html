@@ -45,6 +45,7 @@
 
     /* sem zoom de dois toques e sem rolagem para os lados no celular */
     * { touch-action: manipulation; }
+    html, body { touch-action: pan-y pinch-zoom; overscroll-behavior-x: none; }
     html { overflow-x: hidden; }
     @supports (overflow: clip) { html, body { overflow-x: clip; } }
 
@@ -426,5 +427,14 @@
       Patricia Paião<span>·</span>Doces Momentos Convites
     </footer>
   </main>
+<script>
+    // Mantém a página sempre encaixada na largura da tela (iPhone às vezes "escorrega" de lado)
+    (() => {
+      const centralizar = () => { if (window.scrollX !== 0) window.scrollTo(0, window.scrollY); };
+      addEventListener('scroll', centralizar, { passive: true });
+      addEventListener('resize', centralizar);
+      addEventListener('orientationchange', () => setTimeout(centralizar, 300));
+    })();
+  </script>
 </body>
 </html>

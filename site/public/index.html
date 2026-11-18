@@ -44,6 +44,9 @@
 
     /* sem zoom de dois toques e sem rolagem para os lados no celular */
     * { touch-action: manipulation; }
+    html, body { touch-action: pan-y pinch-zoom; overscroll-behavior-x: none; }
+    .filtros { touch-action: pan-x pan-y pinch-zoom; }
+    .produto-interno { touch-action: pan-y pinch-zoom; }
     html { overflow-x: hidden; }
     @supports (overflow: clip) { html, body { overflow-x: clip; } }
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); }
@@ -960,6 +963,15 @@
       document.body.appendChild(a); a.click(); a.remove();
     });
   })();
+  </script>
+<script>
+    // Mantém a página sempre encaixada na largura da tela (iPhone às vezes "escorrega" de lado)
+    (() => {
+      const centralizar = () => { if (window.scrollX !== 0) window.scrollTo(0, window.scrollY); };
+      addEventListener('scroll', centralizar, { passive: true });
+      addEventListener('resize', centralizar);
+      addEventListener('orientationchange', () => setTimeout(centralizar, 300));
+    })();
   </script>
 </body>
 </html>
