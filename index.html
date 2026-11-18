@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Doces Momentos Convites | Papelaria de Casamento</title>
+  <meta name="description" content="Convites de casamento personalizados há 14 anos. Envio para todo o Brasil. Solicite seu orçamento.">
+  <meta name="theme-color" content="#F6F2EC">
+
+  <!-- Open Graph / compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Doces Momentos Convites">
+  <meta property="og:title" content="Doces Momentos Convites | Papelaria de Casamento">
+  <meta property="og:description" content="Convites de casamento personalizados há 14 anos. Envio para todo o Brasil. Solicite seu orçamento.">
+  <!-- Troque pelo endereço absoluto quando o domínio estiver no ar (ex.: https://link.docesmomentos.com.br/og-image.png) -->
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #F6F2EC;
+      --paper-warm: #FCFAF7;
+      --brand: #55697F;
+      --brand-dark: #45576B;
+      --ink: #1F2E45;
+      --muted: #6E6A64; /* cinza quente, levemente escurecido p/ contraste AA */
+      --gold: #B8955A;
+      --gold-dark: #8F703F;
+      --sage: #8A9682;
+      --linen: #E6DED2;
+      --ease: cubic-bezier(.22, .61, .36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      background-color: var(--paper);
+      /* textura de papel sutil */
+      background-image:
+        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.7), transparent 60%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      color: var(--ink);
+      font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 420px;
+      padding: max(56px, env(safe-area-inset-top)) 24px max(40px, env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* ---------- Selo / logo ---------- */
+    .seal {
+      position: relative;
+      width: 168px;
+      height: 168px;
+      margin-bottom: 36px;
+    }
+    .seal .logo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.6) inset,
+        0 18px 40px -18px rgba(31,46,69,.45),
+        0 2px 6px rgba(31,46,69,.08);
+    }
+    .seal img.logo { object-fit: cover; }
+    .seal .wax {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      right: -16px;
+      bottom: -10px;
+      transform: rotate(-12deg);
+      filter: drop-shadow(0 4px 6px rgba(80,55,20,.28));
+    }
+
+    /* ---------- Textos ---------- */
+    h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding-left: .2em; /* compensa o letter-spacing para centralizar */
+    }
+    h1 .script {
+      display: block;
+      margin-top: 2px;
+      font-family: "Pinyon Script", cursive;
+      font-weight: 400;
+      font-size: 40px;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--brand);
+      padding-left: 0;
+    }
+    .subtitle {
+      margin: 14px 0 0;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--brand);
+      padding-left: .28em;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 180px;
+      margin: 28px 0 24px;
+      color: var(--gold);
+    }
+    .ornament::before, .ornament::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .ornament::after { background: linear-gradient(90deg, var(--gold), transparent); }
+    .ornament svg { width: 14px; height: 14px; flex: none; }
+
+    .tagline {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--ink);
+      max-width: 300px;
+    }
+    .tagline + .tagline { margin-top: 4px; }
+
+    /* ---------- Botões ---------- */
+    .links {
+      width: 100%;
+      display: grid;
+      gap: 14px;
+      margin-top: 40px;
+    }
+    .btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 56px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-family: "Jost", system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn svg { width: 20px; height: 20px; flex: none; }
+    .btn:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: var(--paper-warm);
+      border: 1px solid var(--brand);
+      box-shadow: 0 10px 24px -14px rgba(31,46,69,.65);
+    }
+    .btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 16px 30px -16px rgba(31,46,69,.7); }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-secondary {
+      background: rgba(252,250,247,.55);
+      color: var(--brand);
+      border: 1px solid var(--brand);
+    }
+    .btn-secondary:hover { background: var(--paper-warm); color: var(--brand-dark); border-color: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 12px 24px -18px rgba(31,46,69,.5); }
+    .btn-secondary:active { transform: translateY(0); }
+
+    .note {
+      margin: 18px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .note svg { width: 16px; height: 16px; color: var(--gold-dark); flex: none; }
+
+    /* ---------- Redes ---------- */
+    .social {
+      display: flex;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .social a {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      color: var(--brand);
+      border: 1px solid var(--linen);
+      background: rgba(252,250,247,.6);
+      transition: color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+    }
+    .social a:hover { color: var(--gold-dark); border-color: var(--gold); transform: translateY(-2px); }
+    .social a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .social svg { width: 20px; height: 20px; }
+
+    footer {
+      margin-top: auto;
+      padding-top: 48px;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    footer span { color: var(--gold-dark); margin: 0 .5em; }
+
+    /* ---------- Animação de entrada ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: reveal .8s var(--ease) forwards;
+      animation-delay: calc(var(--i, 0) * 120ms + 100ms);
+    }
+    @keyframes reveal {
+      to { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; animation: none; }
+      .btn, .social a { transition: none; }
+      .btn:hover, .social a:hover { transform: none; }
+    }
+
+    @media (max-width: 360px) {
+      h1 { font-size: 26px; }
+      h1 .script { font-size: 36px; }
+      .btn { font-size: 12px; letter-spacing: .12em; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- Selo da marca. Para usar o logo original, troque o <svg class="logo"> por:
+         <img class="logo" src="logo.png" alt="Doces Momentos Convites"> -->
+    <div class="seal reveal" style="--i:0">
+      <svg class="logo" viewBox="0 0 200 200" role="img" aria-label="Doces Momentos Convites">
+        <defs>
+          <path id="arc-top" d="M 36,100 A 64,64 0 0 1 164,100" />
+          <path id="arc-bottom" d="M 22,100 A 78,78 0 0 0 178,100" />
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="#55697F"/>
+        <circle cx="100" cy="100" r="92" fill="none" stroke="#F6F2EC" stroke-opacity=".35" stroke-width=".6"/>
+        <g fill="#F6F2EC" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="15" letter-spacing="3.4">
+          <text text-anchor="middle"><textPath href="#arc-top" startOffset="50%">DOCES MOMENTOS</textPath></text>
+          <text text-anchor="middle"><textPath href="#arc-bottom" startOffset="50%">CONVITES</textPath></text>
+        </g>
+        <circle cx="21" cy="100" r="1.8" fill="#F6F2EC"/>
+        <circle cx="179" cy="100" r="1.8" fill="#F6F2EC"/>
+        <!-- envelope + flor -->
+        <g fill="none" stroke="#F6F2EC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M100,104 C100,96 100,90 100,84"/>
+          <path d="M100,96 C94,95 90,91 89,86 C94,86 98,90 100,96"/>
+          <path d="M100,92 C106,91 110,87 111,82 C106,82 102,86 100,92"/>
+          <path d="M100,62 C95,68 94,76 100,84 C106,76 105,68 100,62Z"/>
+          <path d="M100,84 C93,82 88,76 87,68 C93,70 97,76 100,84"/>
+          <path d="M100,84 C107,82 112,76 113,68 C107,70 103,76 100,84"/>
+          <rect x="72" y="100" width="56" height="36" rx="1.5"/>
+          <path d="M72,100 L100,121 L128,100"/>
+          <path d="M72,136 L93,116 M128,136 L107,116" stroke-opacity=".6"/>
+        </g>
+      </svg>
+
+      <!-- lacre de cera dourado -->
+      <svg class="wax" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <radialGradient id="wax-g" cx="38%" cy="32%" r="75%">
+            <stop offset="0" stop-color="#E3C996"/>
+            <stop offset=".45" stop-color="#C4A061"/>
+            <stop offset="1" stop-color="#8F703F"/>
+          </radialGradient>
+          <radialGradient id="wax-in" cx="60%" cy="65%" r="70%">
+            <stop offset="0" stop-color="#D9BC84"/>
+            <stop offset="1" stop-color="#A9864D"/>
+          </radialGradient>
+        </defs>
+        <path fill="url(#wax-g)" d="M95.8,50.0 L96.5,54.1 L96.6,58.4 L93.3,61.8 L92.9,65.9 L91.2,69.6 L88.4,72.6 L85.9,75.6 L81.4,76.9 L79.7,80.3 L77.9,83.9 L76.4,88.5 L74.0,92.4 L70.3,94.3 L65.2,92.7 L61.4,93.3 L57.8,95.3 L54.0,96.5 L50.0,94.7 L46.3,93.0 L42.3,94.3 L38.6,93.5 L33.4,96.6 L29.7,94.4 L26.9,90.8 L24.8,86.7 L22.3,83.7 L18.5,82.2 L16.6,78.6 L13.8,75.8 L12.2,72.3 L10.5,68.8 L6.7,66.1 L4.5,62.4 L3.3,58.4 L4.4,54.1 L5.7,50.0 L7.6,46.2 L7.9,42.4 L7.0,38.2 L8.2,34.5 L10.2,31.1 L10.6,26.8 L11.6,22.6 L13.7,18.9 L16.0,15.3 L20.6,14.2 L24.8,13.3 L28.7,12.4 L32.0,10.7 L34.3,6.1 L38.4,6.0 L42.1,4.6 L46.0,3.1 L50.0,3.4 L54.1,1.7 L58.0,3.7 L61.7,5.3 L64.7,8.7 L67.7,11.3 L72.0,11.1 L75.8,12.4 L80.2,13.3 L82.9,16.4 L85.3,19.8 L87.8,23.0 L91.2,25.7 L92.9,29.6 L91.5,34.6 L91.0,38.8 L90.1,42.8 L94.0,46.1Z"/>
+        <circle cx="50" cy="50" r="31" fill="url(#wax-in)"/>
+        <circle cx="50" cy="50" r="31" fill="none" stroke="#7E6136" stroke-opacity=".45" stroke-width="1.2"/>
+        <circle cx="50" cy="50" r="26" fill="none" stroke="#F3E3C0" stroke-opacity=".55" stroke-width=".8"/>
+        <text x="50" y="59" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="26" font-weight="600" fill="#7E6136" fill-opacity=".85" letter-spacing="1">DM</text>
+        <ellipse cx="34" cy="28" rx="10" ry="5" fill="#fff" fill-opacity=".28" transform="rotate(-30 34 28)"/>
+      </svg>
+    </div>
+
+    <h1 class="reveal" style="--i:1">Doces <span class="script">Momentos</span></h1>
+    <p class="subtitle reveal" style="--i:2">Papelaria de casamento</p>
+
+    <div class="ornament reveal" style="--i:3" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.6 2.4 6.9 7 8-4.6 1.1-6.4 3.4-7 8-.6-4.6-2.4-6.9-7-8 4.6-1.1 6.4-3.4 7-8z" transform="translate(0 2) scale(1 .85)"/></svg>
+    </div>
+
+    <p class="tagline reveal" style="--i:4">Há 14 anos criando convites exclusivos.</p>
+    <p class="tagline reveal" style="--i:4">Enviamos para todo o Brasil.</p>
+
+    <nav class="links" aria-label="Links principais">
+      <a class="btn btn-primary reveal" style="--i:5"
+         href="https://wa.me/5512992530847?text=Ol%C3%A1%2C%20Patricia!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20convites."
+         target="_blank" rel="noopener"
+         aria-label="Solicitar orçamento pelo WhatsApp (abre em nova aba)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.6l-4.5.9z"/>
+          <path d="M9 8.6c.2-.5.6-.6.9-.6h.4c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.6l-.5.6c-.1.1-.2.3-.1.5.6 1.2 1.6 2.1 2.8 2.7.2.1.4 0 .5-.1l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.4c0 .4-.2.8-.6 1-.6.3-1.4.4-2.1.2-2.6-.8-4.7-2.8-5.6-5.4-.2-.7-.1-1.6.0-2z"/>
+        </svg>
+        Solicitar orçamento
+      </a>
+
+      <!-- SITE: troque o href pelo endereço final do site quando estiver no ar.
+           Enquanto isso, o botão leva ao portfólio no Instagram. -->
+      <a class="btn btn-secondary reveal" style="--i:6"
+         href="https://www.instagram.com/docesmomentosconvites/"
+         target="_blank" rel="noopener"
+         aria-label="Conheça nosso trabalho (abre em nova aba)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="M3.5 6l8.5 6.5L20.5 6"/>
+        </svg>
+        Conheça nosso trabalho
+      </a>
+    </nav>
+
+
+    <div class="social reveal" style="--i:7">
+      <a href="https://www.instagram.com/docesmomentosconvites/" target="_blank" rel="noopener" aria-label="Instagram @docesmomentosconvites (abre em nova aba)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.threads.net/@docesmomentosconvites" target="_blank" rel="noopener" aria-label="Threads @docesmomentosconvites (abre em nova aba)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16.5 11.2c-.4-2.4-2-3.7-4.4-3.7-2.6 0-4.2 1.7-4.2 1.7"/>
+          <path d="M16.6 11.3c-3.9-1-7.4-.2-7.4 2.6 0 1.6 1.5 2.5 3.1 2.4 2.5-.1 4.1-1.8 4.1-5.6 0-.1 0 .1 0 0"/>
+          <path d="M16.6 11.3c2.2.9 3.2 2.6 2.8 4.6-.6 3-3.4 5.1-7.3 5.1-5.2 0-8.1-3.4-8.1-9S6.9 3 12.1 3c4 0 6.7 2 7.7 5.4"/>
+        </svg>
+      </a>
+    </div>
+
+    <footer class="reveal" style="--i:8">
+      Patricia Paião<span>·</span>Doces Momentos Convites
+    </footer>
+  </main>
+</body>
+</html>
